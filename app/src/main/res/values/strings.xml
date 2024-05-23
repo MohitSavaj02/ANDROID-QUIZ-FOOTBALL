@@ -12,4 +12,5 @@
     <string name="salary">Salary</string>
     <string name="age">Age</string>
     <string name="product_data">Product Data</string>
+    <string name="player_image_question">Guess the player name from below image !</string>
 </resources>

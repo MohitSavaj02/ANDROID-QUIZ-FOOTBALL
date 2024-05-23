@@ -8,6 +8,7 @@ import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.example.baseproject.R
 import com.example.baseproject.app.MyApp
+import com.google.gson.Gson
 
 fun after(milliSeconds: Long, action: () -> Unit) {
     Handler(Looper.getMainLooper()).postDelayed({ action() }, milliSeconds)
@@ -36,4 +37,9 @@ fun ImageView.load(data: Any?) {
 
 fun Int.asColor(): Int {
     return MyApp.getAppInstance().getColor(this)
+}
+
+fun Any?.toJsonString(): String {
+    if (this == null) return ""
+    return Gson().toJson(this) ?: this.toString()
 }

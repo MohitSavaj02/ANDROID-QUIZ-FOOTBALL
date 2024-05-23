@@ -1,6 +1,7 @@
 package com.example.baseproject.base
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.baseproject.utils.PrefUtils
@@ -18,5 +19,13 @@ abstract class BaseActivity : AppCompatActivity() {
 
     fun showToast(data: Any?) {
         Toast.makeText(this, data.toString(), Toast.LENGTH_SHORT).show()
+    }
+
+    fun printData(str: Any?) {
+        Log.e("The_Wolf", "printData: $str")
+    }
+
+    fun printData(key: String, str: Any?) {
+        Log.e("The_Wolf", "$key---------->: $str")
     }
 }

@@ -37,6 +37,8 @@ class APIServiceModule {
             val requestBuilder = original.newBuilder()
                 .addHeader("Content-Type", "application/json")
                 .addHeader("Cache-Control", "no-cache")
+                .addHeader("X-RapidAPI-Host", AppConstant.RAPID_HOST)
+                .addHeader("X-RapidAPI-Key", AppConstant.RAPID_API_KEY)
             if (!token.isNullOrEmpty()) {
                 requestBuilder.addHeader("Authorization", "Bearer $token")
             }
