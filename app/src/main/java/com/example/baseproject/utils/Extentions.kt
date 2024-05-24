@@ -19,6 +19,11 @@ fun Int.asString(context: Context? = null): String {
     return MyApp.getAppInstance().getString(this)
 }
 
+fun Int.asString(context: Context? = null, arg: String?): String {
+    if (context != null) return context.getString(this)
+    return MyApp.getAppInstance().getString(this, arg)
+}
+
 fun View.enable() {
     this.isEnabled = true
 }

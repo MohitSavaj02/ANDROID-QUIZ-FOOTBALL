@@ -25,16 +25,12 @@
         android:layout_below="@+id/txtTitle">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvProduct"
+            android:id="@+id/rvQuestions"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:orientation="vertical"
-            android:paddingBottom="@dimen/_100dp"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:spanCount="2"
-            tools:listitem="@layout/item_product" />
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="20"
+            tools:listitem="@layout/item_question" />
 
         <ProgressBar
             android:layout_width="@dimen/_25dp"
@@ -49,13 +45,4 @@
             android:text="@string/no_data"
             android:textSize="@dimen/_16sp" />
     </ViewAnimator>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnGetData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="@dimen/_10dp"
-        android:text="@string/get_product_data" />
 </RelativeLayout>

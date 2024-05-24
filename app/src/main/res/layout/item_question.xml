@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/_5dp"
+    app:cardElevation="@dimen/_3dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="@dimen/_5dp"
+    app:strokeWidth="@dimen/_0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_5dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgPhoto"
+            android:layout_width="@dimen/_100dp"
+            android:layout_height="@dimen/_100dp"
+            android:layout_gravity="center"
+            android:src="@color/placeHolder"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5dp"
+            android:textSize="@dimen/_16sp"
+            android:textStyle="bold"
+            tools:text="@string/player_image_question" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5dp"
+            android:textSize="@dimen/_16sp"
+            android:textStyle="bold"
+            tools:text="@string/mohit_savaj" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5dp"
+            android:textColor="@color/green"
+            android:textSize="@dimen/_16sp"
+            android:textStyle="bold"
+            tools:text="@string/mohit_savaj" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

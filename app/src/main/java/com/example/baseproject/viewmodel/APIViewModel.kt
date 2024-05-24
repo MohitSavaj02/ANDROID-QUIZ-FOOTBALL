@@ -3,6 +3,7 @@ package com.example.baseproject.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.baseproject.data.SquadResponse
 import com.example.baseproject.data.TeamDataResponse
 import com.example.baseproject.data.resource.Resource
 import com.example.baseproject.reposotory.APIRepository
@@ -24,6 +25,15 @@ class APIViewModel @Inject constructor(
         viewModelScope.launch {
             repository.getTeamData(teamId = teamId, season = season, page = page).onEach { state ->
                 getTeamDataResponse.value = state
+            }.launchIn(viewModelScope)
+        }
+    }
+
+    val getSquadResponse: MutableLiveData<Resource<SquadResponse>> = MutableLiveData()
+    fun getSquad(teamId: Int) {
+        viewModelScope.launch {
+            repository.getSquad(teamId = teamId).onEach { state ->
+                getSquadResponse.value = state
             }.launchIn(viewModelScope)
         }
     }

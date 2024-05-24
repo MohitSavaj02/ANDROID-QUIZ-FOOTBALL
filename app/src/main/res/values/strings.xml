@@ -12,5 +12,9 @@
     <string name="salary">Salary</string>
     <string name="age">Age</string>
     <string name="product_data">Product Data</string>
-    <string name="player_image_question">Guess the player name from below image !</string>
+    <string name="player_image_question">Can you identify the player in the image below? Try to guess their name!</string>
+    <string name="player_birthplace_question">Can you guess the birthplace of the player shown in the image below?</string>
+    <string name="player_nationality_question">Can you guess the nationality of the player " %s "?</string>
+    <string name="player_position_question">Can you guess the position of the player " %s "?</string>
+    <string name="done">Done</string>
 </resources>
