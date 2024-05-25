@@ -1,4 +1,4 @@
-package com.example.baseproject.ui.main
+package com.example.baseproject.ui.quiz
 
 import android.os.Bundle
 import android.view.View

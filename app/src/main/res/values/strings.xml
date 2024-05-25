@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BaseProject</string>
+    <string name="app_name">BW Afica</string>
     <string name="welcome">Welcome</string>
     <string name="something_went_wrong">Something went wrong</string>
     <string name="connection_timeout">Connection Timeout</string>
@@ -17,4 +17,16 @@
     <string name="player_nationality_question">Can you guess the nationality of the player " %s "?</string>
     <string name="player_position_question">Can you guess the position of the player " %s "?</string>
     <string name="done">Done</string>
+    <string name="play">PLAY</string>
+    <string name="settings">Settings</string>
+    <string name="scores">Scores</string>
+    <string name="score">SCORE</string>
+    <string name="_1">1</string>
+    <string name="_5_10">5-10</string>
+    <string name="_25_pt">25Pt</string>
+    <string name="_13_05_24">13/05/24</string>
+    <string name="sound">Sound</string>
+    <string name="how_to_play">How to play?</string>
+    <string name="invite_friend">Invite Friend</string>
+    <string name="settings_caps">SETTINGS</string>
 </resources>

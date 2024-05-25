@@ -1,36 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:background="@color/yellow"
     android:orientation="vertical"
-    tools:context=".ui.quiz.MainActivity">
+    tools:context=".ui.score.ScoreActivity">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/_10dp"
-        android:text="@string/product_data"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_26sp"
-        android:textStyle="bold" />
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/layout_header" />
 
     <ViewAnimator
         android:id="@+id/viewAnimator"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/txtTitle">
+        android:background="@drawable/top_corner_shape">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvQuestions"
+            android:id="@+id/rvScores"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="@dimen/_5dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:itemCount="20"
-            tools:listitem="@layout/item_question" />
+            tools:listitem="@layout/item_score" />
 
         <ProgressBar
             android:layout_width="@dimen/_25dp"
@@ -45,4 +40,4 @@
             android:text="@string/no_data"
             android:textSize="@dimen/_16sp" />
     </ViewAnimator>
-</RelativeLayout>
+</LinearLayout>

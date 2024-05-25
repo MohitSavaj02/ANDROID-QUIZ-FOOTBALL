@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_80dp"
+    android:background="@drawable/green_bg"
+    android:gravity="center"
+    android:paddingHorizontal="@dimen/_20dp"
+    android:paddingBottom="@dimen/_5dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtIndex"
+        android:layout_width="@dimen/_30dp"
+        android:layout_height="@dimen/_30dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:background="@drawable/round_shape"
+        android:gravity="center"
+        android:textSize="@dimen/_16sp"
+        tools:text="@string/_1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:letterSpacing="0.12"
+        android:textSize="@dimen/_18sp"
+        android:text="@string/_13_05_24" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtRightWrong"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:letterSpacing="0.12"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sp"
+        android:text="@string/_5_10" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtPoint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:letterSpacing="0.12"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sp"
+        android:text="@string/_25_pt" />
+</LinearLayout>

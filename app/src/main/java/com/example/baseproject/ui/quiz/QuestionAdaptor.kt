@@ -1,4 +1,4 @@
-package com.example.baseproject.ui.main
+package com.example.baseproject.ui.quiz
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater

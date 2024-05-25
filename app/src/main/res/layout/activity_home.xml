@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200dp"
+        android:layout_marginBottom="@dimen/_20dp"
+        android:src="@drawable/splash_logo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtPlayGame"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70dp"
+        android:layout_marginHorizontal="@dimen/_50dp"
+        android:layout_marginVertical="@dimen/_20dp"
+        android:background="@drawable/primary_btn_bg"
+        android:foreground="?selectableItemBackground"
+        android:gravity="center"
+        android:paddingBottom="@dimen/_5dp"
+        android:text="@string/play"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_30sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtSettings"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70dp"
+        android:layout_marginHorizontal="@dimen/_50dp"
+        android:layout_marginVertical="@dimen/_20dp"
+        android:background="@drawable/primary_btn_bg"
+        android:foreground="?selectableItemBackground"
+        android:gravity="center"
+        android:paddingBottom="@dimen/_5dp"
+        android:text="@string/settings"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_30sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtScores"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70dp"
+        android:layout_marginHorizontal="@dimen/_50dp"
+        android:layout_marginVertical="@dimen/_20dp"
+        android:background="@drawable/primary_btn_bg"
+        android:foreground="?selectableItemBackground"
+        android:gravity="center"
+        android:paddingBottom="@dimen/_5dp"
+        android:text="@string/scores"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_30sp" />
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    android:orientation="vertical"
+    tools:context=".ui.settings.SettingsActivity">
+
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/layout_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_40dp"
+        android:background="@drawable/top_corner_shape"
+        android:orientation="vertical"
+        android:padding="@dimen/_10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90dp"
+            android:background="@drawable/green_bg"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_30dp"
+            android:paddingBottom="@dimen/_5dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/sound"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_24sp" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switchSound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                app:thumbTint="@color/switch_selector"
+                app:trackTint="@color/switch_track_selector" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llHowToPlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90dp"
+            android:background="@drawable/green_bg"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_30dp"
+            android:paddingBottom="@dimen/_5dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/how_to_play"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_24sp" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="@dimen/_60dp"
+                android:layout_height="@dimen/_60dp"
+                android:padding="@dimen/_5dp"
+                android:src="@drawable/setting_how_play" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llInvite"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90dp"
+            android:background="@drawable/green_bg"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_30dp"
+            android:paddingBottom="@dimen/_5dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/invite_friend"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_24sp" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="@dimen/_60dp"
+                android:layout_height="@dimen/_60dp"
+                android:padding="@dimen/_5dp"
+                android:src="@drawable/setting_invite" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
