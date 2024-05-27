@@ -7,6 +7,7 @@ import android.view.View
 import androidx.activity.enableEdgeToEdge
 import com.example.baseproject.base.BaseActivity
 import com.example.baseproject.databinding.ActivityHomeBinding
+import com.example.baseproject.ui.quiz.QuizActivity
 import com.example.baseproject.ui.score.ScoreActivity
 import com.example.baseproject.ui.settings.SettingsActivity
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -36,7 +37,10 @@ class HomeActivity : BaseActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v) {
-            binding.txtPlayGame -> {}
+            binding.txtPlayGame -> {
+                startActivity(Intent(this, QuizActivity::class.java))
+            }
+
             binding.txtSettings -> {
                 startActivity(Intent(this, SettingsActivity::class.java))
             }
