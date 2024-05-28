@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/yellow"
+    android:fillViewport="true"
     android:orientation="vertical"
     tools:context=".ui.quiz.QuizActivity">
 
@@ -12,13 +13,12 @@
         android:id="@+id/llContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
         android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fitsSystemWindows="true"
+            android:background="@color/yellow"
             android:padding="@dimen/_10dp">
 
             <com.google.android.material.imageview.ShapeableImageView
@@ -69,9 +69,88 @@
 
         </RelativeLayout>
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPager"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_212dp"
+                    android:background="@drawable/bottom_corner_shape" />
+
+                <LinearLayout
+                    android:id="@+id/llQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_160dp"
+                    android:layout_margin="@dimen/_20dp"
+                    android:background="@drawable/question_box"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10dp">
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_10dp"
+                        android:progress="50"
+                        app:indicatorColor="@color/yellow"
+                        app:indicatorTrackGapSize="@dimen/_0dp"
+                        app:trackColor="@color/grey"
+                        app:trackCornerRadius="@dimen/_10dp"
+                        app:trackStopIndicatorSize="@dimen/_0dp"
+                        app:trackThickness="@dimen/_20dp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtQuestion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/player_image_question"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16sp" />
+
+                </LinearLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgQuestionImage"
+                    android:layout_width="@dimen/_120dp"
+                    android:layout_height="@dimen/_120dp"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginTop="@dimen/_120dp"
+                    android:background="@color/white"
+                    android:elevation="@dimen/_2dp"
+                    android:src="@drawable/player_image"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Small" />
+            </FrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_20dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_options" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtNext"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60dp"
+                android:layout_marginHorizontal="@dimen/_60dp"
+                android:layout_marginVertical="@dimen/_20dp"
+                android:background="@drawable/primary_btn_bg"
+                android:foreground="?selectableItemBackground"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_5dp"
+                android:text="@string/next"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_24sp" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</androidx.core.widget.NestedScrollView>

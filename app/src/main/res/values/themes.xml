@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <style name="Base.Theme.BaseProject" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -9,8 +9,10 @@
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:navigationBarColor">@color/transparent</item>
         <item name="android:forceDarkAllowed">false</item>
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:windowLayoutInDisplayCutoutMode" tools:ignore="NewApi">shortEdges</item>
+    </style>
+
+    <style name="yellowStatusBar" parent="Base.Theme.BaseProject">
+        <item name="colorPrimaryDark">@color/yellow</item>
     </style>
 
     <style name="Theme.BaseProject" parent="Base.Theme.BaseProject" />

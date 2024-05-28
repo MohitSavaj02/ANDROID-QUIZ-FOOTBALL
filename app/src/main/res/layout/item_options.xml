@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llRoot"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70dp"
+        android:background="@drawable/option_bg_normal"
+        android:foreground="?android:selectableItemBackground"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_20dp"
+        android:paddingBottom="@dimen/_5dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtAbc"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/option_round_selector"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sp"
+            tools:text="@string/a" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtOptions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:letterSpacing="0.12"
+            android:text="@string/mohit_savaj"
+            android:textColor="@color/black_white_selector"
+            android:textSize="@dimen/_18sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgTrueFalse"
+            android:layout_width="@dimen/_40dp"
+            android:layout_height="@dimen/_40dp"
+            android:src="@drawable/true_check"
+            android:visibility="gone"
+            app:contentPadding="@dimen/_5dp" />
+    </LinearLayout>
+</LinearLayout>

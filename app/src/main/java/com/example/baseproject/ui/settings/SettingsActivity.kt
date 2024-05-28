@@ -18,6 +18,7 @@ class SettingsActivity : BaseActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivitySettingsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setWindowInsets(view = binding.llContainer)
         initViews()
         setClicks()
     }

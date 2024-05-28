@@ -39,7 +39,7 @@ abstract class BaseActivity : AppCompatActivity() {
         view: View? = null,
         isLeftMargin: Boolean = true,
         isRightMargin: Boolean = true,
-        isBottomMargin: Boolean = true,
+        isBottomMargin: Boolean = false,
         isTopMargin: Boolean = true,
     ) {
         WindowCompat.setDecorFitsSystemWindows(window, false)

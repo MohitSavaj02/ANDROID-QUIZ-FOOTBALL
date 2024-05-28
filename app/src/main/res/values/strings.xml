@@ -31,4 +31,14 @@
     <string name="settings_caps">SETTINGS</string>
     <string name="_01_of_25">01 of 25</string>
     <string name="_04_40">04:40</string>
+    <string name="a">A</string>
+    <string name="next">Next</string>
+    <string name="congratulations">Congratulations !</string>
+    <string name="you_ve_scored_80_points">You\'ve scored <font color="#00C71B">+%s</font> points</string>
+    <string name="total_que">Total Que</string>
+    <string name="correct">Correct</string>
+    <string name="wrong">Wrong</string>
+    <string name="result">RESULT</string>
+    <string name="no_quiz_available">No Quiz available</string>
+    <string name="preparing_quiz">Preparing Quiz for you</string>
 </resources>

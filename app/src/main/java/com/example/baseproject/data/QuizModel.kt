@@ -6,5 +6,5 @@ data class QuizModel(
     var answer: String? = null,
     var hasImage: Boolean = false,
     var imageURL: String? = null,
-    var submittedAnswer: String? = null
+    var submittedAnswer: String? = null,
 )

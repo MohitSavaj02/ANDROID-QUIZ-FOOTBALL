@@ -8,6 +8,8 @@
     <color name="placeHolder">#DCDCDC</color>
     <color name="green">#00C71B</color>
     <color name="yellow">#FED000</color>
+    <color name="divider">#E0E0E0</color>
     <color name="grey">#B5B5B5</color>
+    <color name="darkGrey">#8D8D8D</color>
     <color name="transparent">#00000000</color>
 </resources>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    android:orientation="vertical"
+    tools:context=".ui.complete.CompleteActivity">
+
+    <LinearLayout
+        android:id="@+id/llContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layoutHeader"
+            layout="@layout/layout_header" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200dp"
+                    android:background="@drawable/bottom_corner_shape_full" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_50dp"
+                    android:layout_marginTop="@dimen/_50dp"
+                    android:background="@drawable/corner_shape"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_60dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/congratulations"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5dp"
+                        android:text="@string/you_ve_scored_80_points"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16sp"
+                        android:textStyle="normal"
+                        app:fontFamily="sans-serif-light" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1dp"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:background="@color/divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/_10dp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imgQuestionCount"
+                                android:layout_width="@dimen/_30dp"
+                                android:layout_height="@dimen/_30dp"
+                                android:padding="@dimen/_3dp"
+                                android:src="@drawable/total_question"
+                                app:layout_constraintEnd_toStartOf="@+id/txtQuestionCount"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintHorizontal_chainStyle="packed"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:layout_editor_absoluteY="5dp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/txtQuestionCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5dp"
+                                android:text="@string/_1"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_18sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/imgQuestionCount"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toEndOf="@+id/imgQuestionCount"
+                                app:layout_constraintTop_toTopOf="@+id/imgQuestionCount"
+                                tools:layout_editor_absoluteY="10dp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5dp"
+                                android:text="@string/total_que"
+                                android:textColor="@color/darkGrey"
+                                android:textSize="@dimen/_14sp"
+                                android:textStyle="normal"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txtQuestionCount" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:layout_width="@dimen/_1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/divider" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/_10dp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imgCorrectCount"
+                                android:layout_width="@dimen/_30dp"
+                                android:layout_height="@dimen/_30dp"
+                                android:padding="@dimen/_3dp"
+                                android:src="@drawable/correct_count"
+                                app:layout_constraintEnd_toStartOf="@+id/txtCorrectCount"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintHorizontal_chainStyle="packed"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:layout_editor_absoluteY="5dp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/txtCorrectCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5dp"
+                                android:text="@string/_1"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_18sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/imgCorrectCount"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toEndOf="@+id/imgCorrectCount"
+                                app:layout_constraintTop_toTopOf="@+id/imgCorrectCount"
+                                tools:layout_editor_absoluteY="10dp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5dp"
+                                android:text="@string/correct"
+                                android:textColor="@color/darkGrey"
+                                android:textSize="@dimen/_14sp"
+                                android:textStyle="normal"
+                                app:fontFamily="sans-serif"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txtCorrectCount" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:layout_width="@dimen/_1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/divider" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/_10dp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imgWrongCount"
+                                android:layout_width="@dimen/_30dp"
+                                android:layout_height="@dimen/_30dp"
+                                android:padding="@dimen/_3dp"
+                                android:src="@drawable/wrong_count"
+                                app:layout_constraintEnd_toStartOf="@+id/txtWrongCount"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintHorizontal_chainStyle="packed"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:layout_editor_absoluteY="5dp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/txtWrongCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5dp"
+                                android:text="@string/_1"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_18sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/imgWrongCount"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toEndOf="@+id/imgWrongCount"
+                                app:layout_constraintTop_toTopOf="@+id/imgWrongCount"
+                                tools:layout_editor_absoluteY="10dp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5dp"
+                                android:text="@string/wrong"
+                                android:textColor="@color/darkGrey"
+                                android:textSize="@dimen/_14sp"
+                                android:textStyle="normal"
+                                app:fontFamily="sans-serif"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txtWrongCount" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100dp"
+                    android:src="@drawable/ic_cup" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

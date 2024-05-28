@@ -32,6 +32,10 @@
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".ui.complete.CompleteActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".ui.score.ScoreActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
