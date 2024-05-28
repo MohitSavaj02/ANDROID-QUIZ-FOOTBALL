@@ -36,9 +36,11 @@ class QuizActivity : BaseActivity(), View.OnClickListener {
     }
 
     private fun initViews() {
+        printData("item", item)
         adaptor = OptionsAdaptor()
-        binding.rvOptions.adapter = adaptor
+        adaptor.setAnswer(item.answer)
         adaptor.setDataList(item.options)
+        binding.rvOptions.adapter = adaptor
         binding.txtQuestion.text = item.question
         binding.imgQuestionImage.isVisible = item.hasImage
         if (item.hasImage) {
