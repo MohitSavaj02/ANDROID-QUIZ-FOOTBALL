@@ -184,6 +184,7 @@ class HomeActivity : BaseActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v) {
             binding.txtPlayGame -> {
+                clickSound()
                 if (!isCompleteProcess) {
                     showToast(R.string.preparing_quiz.asString())
                     return
@@ -199,10 +200,12 @@ class HomeActivity : BaseActivity(), View.OnClickListener {
             }
 
             binding.txtSettings -> {
+                clickSound()
                 startActivity(Intent(this, SettingsActivity::class.java))
             }
 
             binding.txtScores -> {
+                clickSound()
                 startActivity(Intent(this, ScoreActivity::class.java))
             }
         }

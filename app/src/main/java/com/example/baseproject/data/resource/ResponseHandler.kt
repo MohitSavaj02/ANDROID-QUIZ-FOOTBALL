@@ -9,7 +9,7 @@ import com.example.baseproject.data.error.EmptyResponseBodyException
 import com.example.baseproject.data.error.UnauthorizedException
 import com.example.baseproject.data.error.ValidationException
 import com.example.baseproject.app.AppConstant
-import com.example.baseproject.app.MyApp
+import com.example.baseproject.app.BWApp
 import com.example.baseproject.utils.asString
 import org.json.JSONObject
 import retrofit2.Response
@@ -63,7 +63,7 @@ class ResponseHandler(private val errorUtils: ErrorUtils) {
             return if (response.code() == 401) {
                 val intent = Intent(AppConstant.SESSION_BROADCAST) //action: "msg"
                 intent.putExtra(AppConstant.DATA_TYPE, body.errorMessage)
-                LocalBroadcastManager.getInstance(MyApp.getAppInstance()).sendBroadcast(intent)
+                LocalBroadcastManager.getInstance(BWApp.getAppInstance()).sendBroadcast(intent)
                 Resource.error(body)
             } else if (response.code() == 404) {
                 body.errorCode = 404

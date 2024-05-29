@@ -1,29 +1,24 @@
-package com.example.baseproject.ui.score
+package com.example.baseproject.ui.settings
 
 import android.os.Bundle
 import android.view.View
 import com.example.baseproject.R
 import com.example.baseproject.base.BaseActivity
-import com.example.baseproject.databinding.ActivityScoreBinding
+import com.example.baseproject.databinding.ActivityHowToPlayBinding
 import com.example.baseproject.utils.asString
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @AndroidEntryPoint
-class ScoreActivity : BaseActivity(), View.OnClickListener {
-    private lateinit var binding: ActivityScoreBinding
-    lateinit var adaptor: ScoreAdaptor
-
-    //ViewAnimator
-    private val dataChild = 0
-    private val noDataChild = 1
+class HowToPlayActivity : BaseActivity(), View.OnClickListener {
+    private lateinit var binding: ActivityHowToPlayBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityScoreBinding.inflate(layoutInflater)
+        binding = ActivityHowToPlayBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setWindowInsets(binding.llContainer)
+        setWindowInsets(view = binding.llContainer)
         initViews()
         setClicks()
     }
@@ -33,16 +28,7 @@ class ScoreActivity : BaseActivity(), View.OnClickListener {
     }
 
     private fun initViews() {
-        binding.layoutHeader.txtTitle.text = R.string.score.asString()
-        adaptor = ScoreAdaptor()
-        binding.rvScores.adapter = adaptor
-        val list = prefUtils.getScoreList()
-        if (list.isEmpty()) {
-            binding.viewAnimator.displayedChild = noDataChild
-        } else {
-            adaptor.setDataList(list)
-            binding.viewAnimator.displayedChild = dataChild
-        }
+        binding.layoutHeader.txtTitle.text = R.string.how_to_play.asString()
     }
 
     override fun onClick(v: View?) {

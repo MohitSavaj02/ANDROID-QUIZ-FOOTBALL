@@ -33,11 +33,6 @@
                 tools:itemCount="20"
                 tools:listitem="@layout/item_score" />
 
-            <ProgressBar
-                android:layout_width="@dimen/_25dp"
-                android:layout_height="@dimen/_25dp"
-                android:layout_gravity="center" />
-
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/txtNoData"
                 android:layout_width="wrap_content"

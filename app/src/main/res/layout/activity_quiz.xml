@@ -94,6 +94,7 @@
                     android:padding="@dimen/_10dp">
 
                     <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/llProgress"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="@dimen/_10dp"
@@ -131,9 +132,11 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvOptions"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:layout_marginVertical="@dimen/_20dp"
                 android:orientation="vertical"
+                android:overScrollMode="never"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:itemCount="4"
                 tools:listitem="@layout/item_options" />

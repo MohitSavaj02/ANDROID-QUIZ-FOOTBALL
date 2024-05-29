@@ -13,6 +13,7 @@ import com.example.baseproject.databinding.ItemOptionsBinding
 class OptionsAdaptor : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private var dataList: ArrayList<OptionsModel> = ArrayList()
     private var answer: String? = null
+    private var listener: OptionsAdaptorListener? = null
 
     class QuestionHolder(var binding: ItemOptionsBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -38,7 +39,7 @@ class OptionsAdaptor : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                         imgTrueFalse.setImageResource(R.drawable.true_check)
                         txtAbc.isSelected = true
                         txtOptions.isSelected = true
-                        imgTrueFalse.isVisible = item.isselected == true
+                        imgTrueFalse.isVisible = true
                     } else if (item.isselected == true) {
                         llRoot.setBackgroundResource(R.drawable.option_bg_wrong)
                         imgTrueFalse.setImageResource(R.drawable.wrong_check)
@@ -56,7 +57,7 @@ class OptionsAdaptor : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                         imgTrueFalse.setImageResource(R.drawable.true_check)
                         txtAbc.isSelected = true
                         txtOptions.isSelected = true
-                        imgTrueFalse.isVisible = item.isselected == true
+                        imgTrueFalse.isVisible = true
                     }
                 } else {
                     llRoot.setBackgroundResource(R.drawable.option_bg_normal)
@@ -65,6 +66,7 @@ class OptionsAdaptor : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                     if (submittedAnswer == null) {
                         item.isselected = true
                         notifyDataSetChanged()
+                        listener?.onSubmitAnswer(item)
                     }
                 }
             }
@@ -83,13 +85,30 @@ class OptionsAdaptor : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     fun setAnswer(str: String?) {
         answer = str
     }
-}
 
-fun getAbc(): ArrayList<String> {
-    val list: ArrayList<String> = ArrayList()
-    list.add("A")
-    list.add("B")
-    list.add("C")
-    list.add("D")
-    return list
+    fun setListener(optionsAdaptorListener: OptionsAdaptorListener) {
+        listener = optionsAdaptorListener
+    }
+
+    fun showRightAnswer() {
+        dataList.find { it.options == answer }?.isselected = true
+        notifyDataSetChanged()
+    }
+
+    fun getSubmittedAnswer(): OptionsModel? {
+        return dataList.find { it.isselected == true }
+    }
+
+    interface OptionsAdaptorListener {
+        fun onSubmitAnswer(item: OptionsModel)
+    }
+
+    private fun getAbc(): ArrayList<String> {
+        val list: ArrayList<String> = ArrayList()
+        list.add("A")
+        list.add("B")
+        list.add("C")
+        list.add("D")
+        return list
+    }
 }

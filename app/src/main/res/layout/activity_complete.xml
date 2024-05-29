@@ -51,14 +51,14 @@
                         android:textSize="@dimen/_18sp" />
 
                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtPointsScore"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/_5dp"
                         android:text="@string/you_ve_scored_80_points"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_16sp"
-                        android:textStyle="normal"
-                        app:fontFamily="sans-serif-light" />
+                        app:fontFamily="@font/regular_font" />
 
                     <View
                         android:layout_width="match_parent"
@@ -112,7 +112,7 @@
                                 android:text="@string/total_que"
                                 android:textColor="@color/darkGrey"
                                 android:textSize="@dimen/_14sp"
-                                android:textStyle="normal"
+                                app:fontFamily="@font/regular_font"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/txtQuestionCount" />
@@ -166,8 +166,7 @@
                                 android:text="@string/correct"
                                 android:textColor="@color/darkGrey"
                                 android:textSize="@dimen/_14sp"
-                                android:textStyle="normal"
-                                app:fontFamily="sans-serif"
+                                app:fontFamily="@font/regular_font"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/txtCorrectCount" />
@@ -221,8 +220,7 @@
                                 android:text="@string/wrong"
                                 android:textColor="@color/darkGrey"
                                 android:textSize="@dimen/_14sp"
-                                android:textStyle="normal"
-                                app:fontFamily="sans-serif"
+                                app:fontFamily="@font/regular_font"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/txtWrongCount" />

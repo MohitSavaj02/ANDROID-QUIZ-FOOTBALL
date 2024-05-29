@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    android:orientation="vertical"
+    tools:context=".ui.settings.HowToPlayActivity">
+
+    <LinearLayout
+        android:id="@+id/llContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layoutHeader"
+            layout="@layout/layout_header" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/top_corner_shape"
+            android:padding="@dimen/_20dp"
+            android:text="@string/how_to_play_description"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sp" />
+    </LinearLayout>
+</LinearLayout>

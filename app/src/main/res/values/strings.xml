@@ -34,11 +34,13 @@
     <string name="a">A</string>
     <string name="next">Next</string>
     <string name="congratulations">Congratulations !</string>
-    <string name="you_ve_scored_80_points">You\'ve scored <font color="#00C71B">+%s</font> points</string>
+    <string name="you_ve_scored_80_points">You\'ve scored &lt;font color=\'#00C71B\'&gt;+%1$s&lt;/font&gt; points</string>
     <string name="total_que">Total Que</string>
     <string name="correct">Correct</string>
     <string name="wrong">Wrong</string>
     <string name="result">RESULT</string>
     <string name="no_quiz_available">No Quiz available</string>
     <string name="preparing_quiz">Preparing Quiz for you</string>
+    <string name="please_select_answer">Please select answer</string>
+    <string name="how_to_play_description">Welcome to the BW Quiz Challenge! Test your Football knowledge and have fun!\n\nYour goal is to answer as many questions correctly as possible to generate the highest score.\n\nYou will be presented with 25 questions.\nEach question has multiple choice answers.\nSelect the answer you think is correct.\nYou have a 30 seconds time to answer each question.\nEach correct answer awards you 10 points.\nThere are no penalties for incorrect answers.\nthe game ends when you have answered all 25 questions.\nYour final result will be displayed.\n\nPlay again to improve your score!</string>
 </resources>

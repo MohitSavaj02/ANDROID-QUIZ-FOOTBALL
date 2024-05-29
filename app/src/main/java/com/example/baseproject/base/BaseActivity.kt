@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updateLayoutParams
+import com.example.baseproject.app.BWApp
 import com.example.baseproject.utils.PrefUtils
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import javax.inject.Inject
@@ -17,7 +18,7 @@ import javax.inject.Inject
 @ExperimentalCoroutinesApi
 abstract class BaseActivity : AppCompatActivity() {
     @Inject
-    lateinit var mPrefUtils: PrefUtils
+    lateinit var prefUtils: PrefUtils
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,5 +55,16 @@ abstract class BaseActivity : AppCompatActivity() {
             }
             WindowInsetsCompat.CONSUMED
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (prefUtils.isSoundEnable() && !BWApp.mediaPlayer.isPlaying) {
+            BWApp.getAppInstance().playBgMusic()
+        }
+    }
+
+    fun clickSound() {
+        BWApp.getAppInstance().playButtonCLickSound()
     }
 }

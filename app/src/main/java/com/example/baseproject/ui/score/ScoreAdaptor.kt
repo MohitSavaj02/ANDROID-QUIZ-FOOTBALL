@@ -19,18 +19,17 @@ class ScoreAdaptor : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return 10
         return dataList.size
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-//        val item = dataList[position]
+        val item = dataList[position]
         if (holder is ScoreViewHolder) {
             with(holder.binding) {
                 txtIndex.text = position.plus(1).toString()
-//                txtDate.text = item.date
-//                txtPoint.text = item.points
-//                txtRightWrong.text = item.rightAnswer?.plus(" - ")?.plus(item.wrongAnswer)
+                txtDate.text = item.date
+                txtPoint.text = item.points
+                txtRightWrong.text = item.rightAnswer?.plus(" - ")?.plus(item.wrongAnswer)
             }
         }
     }

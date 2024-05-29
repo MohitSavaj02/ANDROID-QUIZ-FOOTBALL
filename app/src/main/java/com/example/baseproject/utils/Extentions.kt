@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.example.baseproject.R
-import com.example.baseproject.app.MyApp
+import com.example.baseproject.app.BWApp
 import com.google.gson.Gson
 
 fun after(milliSeconds: Long, action: () -> Unit) {
@@ -16,12 +16,12 @@ fun after(milliSeconds: Long, action: () -> Unit) {
 
 fun Int.asString(context: Context? = null): String {
     if (context != null) return context.getString(this)
-    return MyApp.getAppInstance().getString(this)
+    return BWApp.getAppInstance().getString(this)
 }
 
 fun Int.asString(context: Context? = null, arg: String?): String {
     if (context != null) return context.getString(this)
-    return MyApp.getAppInstance().getString(this, arg)
+    return BWApp.getAppInstance().getString(this, arg)
 }
 
 fun View.enable() {
@@ -36,12 +36,12 @@ fun ImageView.load(data: Any?) {
     if (data is Int) {
         this.setImageResource(data)
     } else {
-        Glide.with(MyApp.getAppInstance()).load(data).placeholder(R.color.placeHolder).into(this)
+        Glide.with(BWApp.getAppInstance()).load(data).placeholder(R.color.placeHolder).into(this)
     }
 }
 
 fun Int.asColor(): Int {
-    return MyApp.getAppInstance().getColor(this)
+    return BWApp.getAppInstance().getColor(this)
 }
 
 fun Any?.toJsonString(): String {

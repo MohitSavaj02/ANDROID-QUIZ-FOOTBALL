@@ -22,32 +22,28 @@
         android:id="@+id/txtDate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
+        android:layout_weight="2"
+        android:text="@string/_13_05_24"
         android:textColor="@color/white"
-        android:letterSpacing="0.12"
-        android:textSize="@dimen/_18sp"
-        android:text="@string/_13_05_24" />
+        android:textSize="@dimen/_18sp" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/txtRightWrong"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:letterSpacing="0.12"
         android:gravity="center"
+        android:text="@string/_5_10"
         android:textColor="@color/white"
-        android:textSize="@dimen/_18sp"
-        android:text="@string/_5_10" />
+        android:textSize="@dimen/_18sp" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/txtPoint"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:letterSpacing="0.12"
         android:gravity="center"
+        android:text="@string/_25_pt"
         android:textColor="@color/white"
-        android:textSize="@dimen/_18sp"
-        android:text="@string/_25_pt" />
+        android:textSize="@dimen/_18sp" />
 </LinearLayout>
