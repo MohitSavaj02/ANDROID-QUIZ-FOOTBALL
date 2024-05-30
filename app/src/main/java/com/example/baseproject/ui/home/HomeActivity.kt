@@ -64,7 +64,7 @@ class HomeActivity : BaseActivity(), View.OnClickListener {
                     if (response.isNotEmpty()) {
                         val allPlayerName = response.mapNotNull { it.player?.name }.distinct()
                         val allBirthPlace = response.mapNotNull { it.player?.birth?.place }.distinct()
-                        val allNationality = response.mapNotNull { it.player?.birth?.place }.distinct()
+                        val allNationality = response.mapNotNull { it.player?.nationality }.distinct()
                         for (item in response) {
                             if (!item.player?.photo.isNullOrEmpty() && !item.player?.name.isNullOrEmpty() && allPlayerName.size >= 4)
                                 QUESTIONS_LIST.add(
